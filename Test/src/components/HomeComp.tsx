@@ -132,9 +132,6 @@ const HomeComp = ({ navigation }: any) => {
               }}
             />
           </TouchableOpacity>
-          <View style={styles.settinStyle}>
-            <SvgDotHorizontal />
-          </View>
         </View>
       </View>
       <View style={{ marginTop: 25 }}>
@@ -203,7 +200,7 @@ const styles = StyleSheet.create({
     borderRadius: 50
   },
   containerHeader: {
-    marginHorizontal: 10,
+    marginHorizontal: 15,
     marginTop: 13,
     flexDirection: "row",
     alignItems: "center",
