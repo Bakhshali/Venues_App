@@ -32,13 +32,15 @@ const HomeComp = ({ navigation }: any) => {
       console.log(error)
     }
   };
-
+  
   const renderItems = ({ item }: any) => {
     return (
-      <View style={{ marginHorizontal: 10 }}>
-        <Image style={{ width: 70, height: 70, borderRadius: 50 }} source={{ uri: item.icon }} />
-        <Text style={{ textAlign: "center", fontWeight: "300", color: "#262626", fontSize: 13 }}>{item.name}</Text>
-      </View>
+      <TouchableOpacity onPress={()=>navigation.navigate("NearbyScr", item)}>
+        <View style={{ marginHorizontal: 10 }}>
+          <Image style={{ width: 70, height: 70, borderRadius: 50 }} source={{ uri: item.icon }} />
+          <Text style={{ textAlign: "center", fontWeight: "300", color: "#262626", fontSize: 13 }}>{item.name}</Text>
+        </View>
+      </TouchableOpacity>
     )
   }
 
