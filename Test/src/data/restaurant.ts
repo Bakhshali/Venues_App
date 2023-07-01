@@ -78,7 +78,7 @@ export const restaurants = [
         star: "4.5",
         openDate: "12:00",
         closeDate: "23:00",
-        image: "https://scontent.fgyd20-1.fna.fbcdn.net/v/t39.30808-1/301715457_515883737206114_3781183662457683095_n.png?stp=dst-png_p720x720&_nc_cat=110&ccb=1-7&_nc_sid=c6021c&_nc_ohc=-8exFNSYPScAX_OrdSA&_nc_ht=scontent.fgyd20-1.fna&oh=00_AfC3aFlZLWjPd4-2l8Vnb0xEH0AvZDSPgFHcWd1joOHKbw&oe=6486A9C9",
+        image:"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e65b7974048585.5d76231ca6e8a.jpg",
         categoryId: "1",
 
     },
