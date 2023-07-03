@@ -18,7 +18,7 @@ const LocationComp = () => {
           initialRegion={{
             latitude: 40.4280417,
             longitude: 49.8196028,
-            latitudeDelta: 0.850,
+            latitudeDelta: 0.470,
             longitudeDelta: 0.520,
           }}>
 

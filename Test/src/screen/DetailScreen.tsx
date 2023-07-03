@@ -20,23 +20,17 @@ const DetailScreen = ({ route, navigation }: any) => {
 
   const search = (value: string) => {
     if (value === "") {
-      // If the search input is empty, show all food categories and foods
       setRestaurantFoods({ categories: searchs.categories, foods: searchs.foods });
     } else {
-      // Filter the foods based on the search value
       const filteredFoods = searchs.foods.filter((food: any) =>
         food.name.toLowerCase().includes(value.toLowerCase())
       );
 
-      // Get the unique food category ids from the filtered foods
       const categoryIds = Array.from(new Set(filteredFoods.map((food: any) => food.foodCategoryId)));
-
-      // Filter the categories based on the unique category ids
       const filteredCategories = searchs.categories.filter((category: any) =>
         categoryIds.includes(category.id)
       );
 
-      // Set the filtered categories and foods
       setRestaurantFoods({ categories: filteredCategories, foods: filteredFoods });
     }
   };
@@ -59,7 +53,7 @@ const DetailScreen = ({ route, navigation }: any) => {
     );
 
     if (filteredFoods.length === 0) {
-      return null; // Return null to skip rendering the category if no matching foods
+      return null;
     }
 
     return (
@@ -87,6 +81,9 @@ const DetailScreen = ({ route, navigation }: any) => {
   );
 
   const FoodCategoryItem = ({ item }: any) => {
+    
+    console.log(foodCateg);
+    
     return (
       <TouchableOpacity onPress={item.id}>
         <View style={styles.foodMain}>
@@ -101,7 +98,7 @@ const DetailScreen = ({ route, navigation }: any) => {
       <View>
         <View>
           <Image style={styles.imageView} source={{ uri: item.image }} />
-          <SvgLeftBack style={styles.backIcon} />
+          <SvgLeftBack  style={styles.backIcon} />
           <Text style={styles.dateSty}>🕒 {item.openDate} - {item.closeDate}</Text>
         </View>
         <View style={styles.container}>

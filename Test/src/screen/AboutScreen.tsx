@@ -7,8 +7,8 @@ import SvgStarReview from '../icons/StarReview';
 const AboutScreen = ({ route }: any) => {
     const items = route.params
     return (
-        <View>
-            <View>
+        <View style={{ flex: 1 }}>
+            <View style={{ flex: 2 }}>
                 <MapView style={{ width: "100%", height: 200 }}
                     initialRegion={{
                         latitude: items.lat,
@@ -26,11 +26,8 @@ const AboutScreen = ({ route }: any) => {
                         description="Marker Description"
                     />
                 </MapView>
-
-
-
             </View>
-            <View style={{ marginHorizontal: 20 }}>
+            <View style={{ marginHorizontal: 20, flex: 4 }}>
                 <View style={{ marginTop: 15, flexDirection: "row", justifyContent: "space-between" }}>
                     <View>
                         <Text style={{ fontSize: 20, fontFamily: "Poppins-Bold", color: "black" }}>{items.name}</Text>
@@ -52,19 +49,6 @@ const AboutScreen = ({ route }: any) => {
                         <Text style={{ color: "gray", fontSize: 14, fontFamily: "Poppins-Regular" }}>Baku</Text>
                     </View>
                     <View>
-                        <TouchableOpacity onPress={() => {
-                            const scheme = Platform.OS === 'ios' ? 'maps:' : 'geo:';
-                            const latLng = `${items.lat},${items.long}`;
-                            const label = items.name;
-                            const url: any = Platform.select({
-                                ios: `${scheme}${latLng}?q=${label}`,
-                                android: `${scheme}${latLng}?q=${label}&z=16`,
-                            });
-
-                            Linking.openURL(url);
-                        }}>
-                            <Text style={{ color: 'blue', fontFamily: 'Poppins-Medium', fontSize: 15 }}>Map</Text>
-                        </TouchableOpacity>
                     </View>
                 </View>
                 <View style={{ marginTop: 10 }}>
@@ -87,6 +71,23 @@ const AboutScreen = ({ route }: any) => {
                         <Text style={{ fontSize: 14, color: "#0360FF", fontFamily: "Poppins-Medium" }}>070 304 40 90</Text>
                     </View>
                 </View>
+            </View>
+            <View style={{ flex: 1 }}>
+                <TouchableOpacity onPress={() => {
+                            const scheme = Platform.OS === 'ios' ? 'maps:' : 'geo:';
+                            const latLng = `${items.lat},${items.long}`;
+                            const label = items.name;
+                            const url: any = Platform.select({
+                                ios: `${scheme}${latLng}?q=${label}`,
+                                android: `${scheme}${latLng}?q=${label}&z=16`,
+                            });
+
+                            Linking.openURL(url);
+                        }}>
+                    <View style={{ backgroundColor: "blue", marginHorizontal: 20, marginTop: 20, borderRadius: 8, padding: 17 }}>
+                        <Text style={{ textAlign: "center", color: "white", fontSize: 17,fontFamily:"Poppins-Medium" }}>Xəritəyə bax</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         </View>
     )

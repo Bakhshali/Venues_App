@@ -48,6 +48,9 @@ const HomeComp = ({ navigation }: any) => {
     return (
       <View style={{ marginHorizontal: 10 }}>
         <Image style={styles.sliderImage} source={{ uri: item.image }} />
+        <View style={{position:"absolute",bottom:5,left:10,backgroundColor:"green",padding:5,borderRadius:5}}>
+          <Text style={{color:"white",fontSize:13,fontFamily:"Poppins-Regular",textAlign:"center"}}>{item.name}</Text>
+        </View>
       </View>
     )
   }
@@ -59,9 +62,9 @@ const HomeComp = ({ navigation }: any) => {
           <View>
             <Text style={{ fontSize: 18, color: "black", fontFamily: "Poppins-Medium" }}>{item.category}</Text>
           </View>
-          <View style={{ backgroundColor: "#FF3C3C", width: 55, padding: 2, borderRadius: 6 }}>
+          {/* <View style={{ backgroundColor: "#FF3C3C", width: 55, padding: 2, borderRadius: 6 }}>
             <Text style={{ fontSize: 12, textAlign: "center", color: "white", fontFamily: "Poppins-Regular" }}>Hamısı</Text>
-          </View>
+          </View> */}
         </View>
         <FlatList
           data={item.data}
@@ -104,10 +107,10 @@ const HomeComp = ({ navigation }: any) => {
                   <SvgWatch style={{ marginTop: 2 }} />
                   <Text style={{ fontSize: 13, fontFamily: "Poppins-Regular" }}>{item.openDate} - {item.closeDate}</Text>
                 </View>
-                <View style={{ flexDirection: "row", gap: 3 }}>
+                {/* <View style={{ flexDirection: "row", gap: 3 }}>
                   <SvgLocationMap style={{ marginTop: 2 }} />
                   <Text style={{ fontSize: 13, fontFamily: "Poppins-Regular" }}>7.50 km</Text>
-                </View>
+                </View> */}
               </View>
             </View>
           </TouchableOpacity>
@@ -127,12 +130,16 @@ const HomeComp = ({ navigation }: any) => {
         </View>
         <View style={{ flexDirection: "row", gap: 12, alignItems: "center" }}>
           <TouchableOpacity onPress={() => navigation.navigate("LanguageScr")}>
+            <View style={{flexDirection:"row",gap:10,alignItems:"center"}}>
             <Image
               style={styles.flagImage}
               source={{
                 uri: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Azerbaijan_Democtratic_Republic.PNG?20101216233118',
               }}
             />
+            <SvgDotHorizontal/>
+            </View>
+            
           </TouchableOpacity>
         </View>
       </View>
@@ -189,7 +196,7 @@ const styles = StyleSheet.create({
     width: 375,
     height: 180,
     borderRadius: 15,
-    resizeMode: "cover"
+    resizeMode: "cover",
   },
   flagImage: {
     width: 25,
