@@ -11,7 +11,6 @@ export const restaurants = [
         closeDate: "22:00",
         image: "https://media-cdn.tripadvisor.com/media/photo-s/14/29/52/54/hong-teh-chinese-restaurant.jpg",
         categoryId: "1",
-
     },
     {
         id: "2",

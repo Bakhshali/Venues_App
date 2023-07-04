@@ -125,7 +125,7 @@ const HomeComp = ({ navigation }: any) => {
         <View style={styles.headerMain}>
           <SvgLocation />
           <TouchableOpacity>
-            <Text>Cari məkanınız</Text>
+            <Text>Baku, Azerbaycan</Text>
           </TouchableOpacity>
         </View>
         <View style={{ flexDirection: "row", gap: 12, alignItems: "center" }}>

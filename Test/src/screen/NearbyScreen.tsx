@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, FlatList, TextInput, TouchableOpacity, Image, S
 import React, { useEffect, useState } from 'react'
 import { restaurants } from '../data/restaurant';
 import SvgSearch from '../icons/Search';
+import SvgStarReview from '../icons/StarReview';
 
 const NearbyScreen = ({ route, navigation }: any) => {
   const item = route.params;
@@ -32,17 +33,21 @@ const NearbyScreen = ({ route, navigation }: any) => {
           <View style={{ marginTop: 10 }}>
             <Image style={styles.imageSty} source={{ uri: item.image }} />
           </View>
-          <View style={{ marginTop: 5 }}>
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+          <View style={{ borderBottomEndRadius:10,borderBottomLeftRadius:10, borderWidth:1,borderColor:"#D2D2D2" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between",marginHorizontal:10 }}>
               <Text style={{ fontFamily: "Poppins-Medium", marginTop: 3, fontSize: 22, color: "black" }}>{item.name}</Text>
               <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
                 <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
                 <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
               </View>
             </View>
-            <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+            <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between",marginHorizontal:10}}>
               <View>
                 <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>{item.address}</Text>
+              </View>
+              <View style={{flexDirection:"row",gap:5,alignItems:"center"}}>
+                <SvgStarReview/>
+                <Text>{item.star}</Text>
               </View>
             </View>
           </View>
