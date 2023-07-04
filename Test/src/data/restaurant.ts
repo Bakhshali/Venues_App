@@ -9,7 +9,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "08:00",
         closeDate: "22:00",
-        image: "https://media-cdn.tripadvisor.com/media/photo-s/14/29/52/54/hong-teh-chinese-restaurant.jpg",
+        image: require("../assets/image/Restaurant/hong-teh-chinese-restaurant.jpg"),
         categoryId: "1",
     },
     {
@@ -22,7 +22,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "10:00",
         closeDate: "20:00",
-        image: "https://cdn.vox-cdn.com/thumbor/jR31WVw6JihSIPskLGzUeQk2dxA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/24398917/sushi_palace_exterior.jpg",
+        image: require("../assets/image/Restaurant/sushi_room.jpg"),
         categoryId: "5",
 
     },
@@ -36,7 +36,7 @@ export const restaurants = [
         star: "4.8",
         openDate: "12:30",
         closeDate: "23.00",
-        image: "https://i.pinimg.com/originals/f3/58/1f/f3581f73fe42af6287b27814027ca906.jpg",
+        image: require("../assets/image/Restaurant/winetage.jpg"),
         categoryId: "5",
     },
     {
@@ -49,7 +49,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "12:00",
         closeDate: "22:00",
-        image: "https://sushi.az/wp-content/uploads/2017/12/27__b.jpg",
+        image: require("../assets/image/Restaurant/yuka_kaiten.jpg"),
         categoryId: "5",
 
     },
@@ -63,7 +63,7 @@ export const restaurants = [
         star: "4.9",
         openDate: "10:00",
         closeDate: "00:00",
-        image: "https://monyo.az/uploads/a_1683_logo.png?x=1674816853",
+        image: require("../assets/image/Restaurant/matbakh.png"),
         categoryId: "1",
 
     },
@@ -77,7 +77,7 @@ export const restaurants = [
         star: "4.5",
         openDate: "12:00",
         closeDate: "23:00",
-        image:"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e65b7974048585.5d76231ca6e8a.jpg",
+        image: require("../assets/image/Restaurant/balcony_luxury.jpg"),
         categoryId: "1",
 
     },
@@ -91,7 +91,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "08:00",
         closeDate: "00:00",
-        image: "https://i.ytimg.com/vi/1lAbr7U3ORs/maxresdefault.jpg",
+        image: require("../assets/image/Restaurant/white_palace.jpg"),
         categoryId: "3",
 
     },
@@ -105,7 +105,7 @@ export const restaurants = [
         star: "4.9",
         openDate: "10:00",
         closeDate: "23:00",
-        image: "https://eventective-media.azureedge.net/2652130_lg.jpg",
+        image: require("../assets/image/Restaurant/flamingo.jpg"),
         categoryId: "3",
 
     },
@@ -119,7 +119,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "09:00",
         closeDate: "21:00",
-        image: "https://jakarta.el-hotels.com/sites/default/files/jkt/sapphire-restaurant1.jpg",
+        image: require("../assets/image/Restaurant/saphir.jpg"),
         categoryId: "3",
 
     },
@@ -133,7 +133,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "10:00",
         closeDate: "22:00",
-        image: "https://scontent.fgyd20-1.fna.fbcdn.net/v/t31.18172-8/21762399_1216676168438040_7537487394446116863_o.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=g2mURvtov3oAX-8L7Hu&_nc_ht=scontent.fgyd20-1.fna&oh=00_AfA-IzIsZUFMbShQIT0NWa9INxXxbjSpuJEi6mgHWVMPzw&oe=64A98744",
+        image: require("../assets/image/Restaurant/coffe_station.jpg"),
         categoryId: "4",
 
     },
@@ -147,7 +147,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "08:00",
         closeDate: "22:00",
-        image: "https://images.prismic.io/ferrum/cb8a8446-1dea-43cd-bab9-b2fca8bab6a8_A55A1656.png?auto=compress,format",
+        image: require("../assets/image/Restaurant/fuzzy.jpg"),
         categoryId: "4",
 
     },
@@ -162,7 +162,7 @@ export const restaurants = [
         star: "4.7",
         openDate: "11:00",
         closeDate: "23:00",
-        image: "https://kahve-pazari.com/wp-content/uploads/2022/03/coffeemania-ismi-sizi-yaniltmasin-menu-deta-ansiklopedi-5f78c9b7252d0.jpg",
+        image: require("../assets/image/Restaurant/coffeemania.jpg"),
         categoryId: "4",
 
     },
@@ -177,7 +177,7 @@ export const restaurants = [
         star: "4.7",
         openDate: "06:00",
         closeDate: "00:00",
-        image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/32509821.jpg?k=279bda89d939e23674729784fedda6c7a52c19a9451b5cdff9c6089edb6de40b&o=&hp=1",
+        image: require("../assets/image/Restaurant/Retro_Hotel.jpg"),
         categoryId: "2",
 
     },
@@ -191,7 +191,7 @@ export const restaurants = [
         star: "4.9",
         openDate: "09:00",
         closeDate: "23:30",
-        image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/f4/2c/4e/a-piece-of-open-sky.jpg?w=700&h=-1&s=1",
+        image: require("../assets/image/Restaurant/home_bridge.jpg"),
         categoryId: "2",
 
     },
@@ -205,7 +205,7 @@ export const restaurants = [
         star: "5.0",
         openDate: "08:00",
         closeDate: "23:00",
-        image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/351977891.jpg?k=16d23dc64726e0763a9bdf0f93c1554fdba886e2c3b6f83c355fca2c67ef8936&o=&hp=1",
+        image: require("../assets/image/Restaurant/qafqaz_riversade.jpg"),
         categoryId: "2",
 
     }

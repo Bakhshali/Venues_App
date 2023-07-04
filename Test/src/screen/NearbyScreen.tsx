@@ -31,7 +31,7 @@ const NearbyScreen = ({ route, navigation }: any) => {
       <View style={{ marginTop: 3 }}>
         <TouchableOpacity onPress={() => navigation.navigate("DetailScr", item)}>
           <View style={{ marginTop: 10 }}>
-            <Image style={styles.imageSty} source={{ uri: item.image }} />
+            <Image style={styles.imageSty} source={item.image} />
           </View>
           <View style={{ borderBottomEndRadius:10,borderBottomLeftRadius:10, borderWidth:1,borderColor:"#D2D2D2" }}>
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between",marginHorizontal:10 }}>

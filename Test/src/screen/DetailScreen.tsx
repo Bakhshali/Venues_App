@@ -73,17 +73,14 @@ const DetailScreen = ({ route, navigation }: any) => {
           <Text style={{ fontSize: 13, color: "red", fontFamily: "Poppins-Medium" }}>{item.price} ₼</Text>
         </View>
         <View>
-          <Image style={styles.foodImg} source={{ uri: item.image }} />
+          <Image style={styles.foodImg} source={item.image} />
         </View>
       </View>
       <View style={{ width: "100%", height: 1, backgroundColor: "#CECECE" }}></View>
     </View>
   );
 
-  const FoodCategoryItem = ({ item }: any) => {
-    
-    console.log(foodCateg);
-    
+  const FoodCategoryItem = ({ item }: any) => {    
     return (
       <TouchableOpacity onPress={item.id}>
         <View style={styles.foodMain}>
@@ -97,7 +94,7 @@ const DetailScreen = ({ route, navigation }: any) => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View>
         <View>
-          <Image style={styles.imageView} source={{ uri: item.image }} />
+          <Image style={styles.imageView} source={item.image} />
           <SvgLeftBack  style={styles.backIcon} />
           <Text style={styles.dateSty}>🕒 {item.openDate} - {item.closeDate}</Text>
         </View>

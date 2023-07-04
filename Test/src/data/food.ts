@@ -4,7 +4,7 @@ export const foods = [
         name: "Mərci",
         description: "Toyuq filesi, kök,kartof,bibər,soğan",
         price: "4.90",
-        image: "https://i.ytimg.com/vi/_-xejaErMpc/maxresdefault.jpg",
+        image: require("../assets/image/Food/merci.jpg"),
         foodCategoryId: "1"
     },
     {
@@ -12,7 +12,7 @@ export const foods = [
         name: "Düşbərə",
         description: "Dana əti,xəmir,nanə,kərə yağı,bulyon",
         price: "5.50",
-        image: "https://anadolu.az/image/cache/data/D%C3%BC%C5%9Fb%C9%99r%C9%99-400x400.jpg",
+        image: require("../assets/image/Food/dusbere.jpg"),
         foodCategoryId: "1"
     },
     {
@@ -20,7 +20,7 @@ export const foods = [
         name: "Yunan Salatı",
         description: "Dana əti,xəmir,nanə,kərə yağı,bulyon",
         price: "7.50",
-        image: "https://anadolu.az/image/cache/data/Yunan%20salati-400x400.jpg",
+        image: require("../assets/image/Food/yunan_salati.jpg"),
         foodCategoryId: "2"
     },
     {
@@ -28,7 +28,7 @@ export const foods = [
         name: "Çoban salatı 0.5 pors",
         description: "Pomidor,xiyar,qırmızı soğan,göyərti,limon",
         price: "4",
-        image: "https://turangroup.az/images/detailed/1/WhatsApp_Image_2021-04-16_at_19.54.36.jpeg",
+        image: require("../assets/image/Food/coban_salati.jpeg"),
         foodCategoryId: "2"
     },
     {
@@ -36,23 +36,15 @@ export const foods = [
         name: "Americano",
         description: "S",
         price: "6",
-        image: "https://cdn.buttercms.com/AB7ud4YSE6nmOX0iGlgA",
+        image: require("../assets/image/Food/americano.jpg"),
         foodCategoryId: "3"
-    },
-    {
-        id: "6",
-        name: "Mərci",
-        description: "Toyuq filesi, kök,kartof,bibər,soğan",
-        price: "4.90",
-        image: "https://i.ytimg.com/vi/_-xejaErMpc/maxresdefault.jpg",
-        foodCategoryId: "1"
     },
     {
         id: "7",
         name: "Cappuccino",
         description: "M",
         price: "5.50",
-        image: "https://www.thespruceeats.com/thmb/oUxhx54zsjVWfPlrgedJU0MZ-y0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-make-cappuccinos-766116-hero-01-a754d567739b4ee0b209305138ecb996.jpg",
+        image: require("../assets/image/Food/coppucino.jpg"),
         foodCategoryId: "3"
     },
     {
@@ -60,7 +52,7 @@ export const foods = [
         name: "Latte",
         description: "S",
         price: "6.50",
-        image: "https://upload.wikimedia.org/wikipedia/commons/9/98/Latte_with_winged_tulip_art.jpg",
+        image: require("../assets/image/Food/latte.jpg"),
         foodCategoryId: "3"
     },
     {
@@ -68,7 +60,7 @@ export const foods = [
         name: "Acılı Çay Latte",
         description: "S",
         price: "12.00",
-        image: "https://imgrosetta.mynet.com.tr/file/15891778/15891778-1200x824.png",
+        image: require("../assets/image/Food/acili_cay.webp"),
         foodCategoryId: "5"
     },
     {
@@ -76,7 +68,7 @@ export const foods = [
         name: "Darçın Portağal",
         description: "M",
         price: "9.00",
-        image: "https://turpkimi.com/files/gallery/fd52b833-0bde-42f0-b09a-6c3339cf0d98.jpg",
+        image: require("../assets/image/Food/darcinli_cay.jpg"),
         foodCategoryId: "5"
     },
     {
@@ -84,7 +76,7 @@ export const foods = [
         name: "Affogato",
         description: "M",
         price: "8.00",
-        image: "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2020-07-How-to-make-affogato-at-home%2FKitchn_HowTo_Affogato_0281",
+        image: require("../assets/image/Food/afogato.jpg"),
         foodCategoryId: "6"
     },
     {
@@ -92,7 +84,103 @@ export const foods = [
         name: "Coca-Cola",
         description: "0.5",
         price: "3",
-        image: "https://bazarstore.az/220-large_default/coca-cola-500-ml-pet.jpg",
+        image: require("../assets/image/Food/cola.jpg"),
         foodCategoryId: "4"
+    },
+    {
+        id: "13",
+        name: "Espresso",
+        description: "S",
+        price: "4.00",
+        image: require("../assets/image/Food/espresso.jpg"),
+        foodCategoryId: "7"
+    },
+    {
+        id: "14",
+        name: "Americano",
+        description: "S",
+        price: "5.00",
+        image: require("../assets/image/Food/americano.jpg"),
+        foodCategoryId: "7"
+    },
+    {
+        id: "15",
+        name: "Latte",
+        description: "S",
+        price: "5.50",
+        image: require("../assets/image/Food/latte.jpg"),
+        foodCategoryId: "7"
+    },
+    {
+        id: "16",
+        name: "Shake it up",
+        description: "Sweet & Black Currant, Strawberry",
+        price: "8.00",
+        image: require("../assets/image/Food/shakeitup.webp"),
+        foodCategoryId: "8"
+    },
+    {
+        id: "17",
+        name: "Citrus shine",
+        description: "Sweet & Passion fruit, Lime, Soda",
+        price: "8.00",
+        image: require("../assets/image/Food/citrus_shine.jpeg"),
+        foodCategoryId: "8"
+    },
+    {
+        id: "18",
+        name: "Milkshake",
+        description: "Chocolate & Caramel & Strawberry",
+        price: "8.00",
+        image: require("../assets/image/Food/milkshake.jpg"),
+        foodCategoryId: "8"
+    },
+    {
+        id: "19",
+        name: "Espresso",
+        description: "S",
+        price: "4.50",
+        image: require("../assets/image/Food/espresso.jpg"),
+        foodCategoryId: "9"
+    },
+    {
+        id: "20",
+        name: "Espresso Macchiato",
+        description: "S",
+        price: "5.00",
+        image: require("../assets/image/Food/machiato.jpg"),
+        foodCategoryId: "9"
+    },
+    {
+        id: "21",
+        name: "Soyuq filtr qəhvə",
+        description: "Ice filter coffee",
+        price: "7.00",
+        image: require("../assets/image/Food/icedcofe.webp"),
+        foodCategoryId: "10"
+    },
+    {
+        id: "22",
+        name: "Soyuq südlü filtr qəhvə",
+        description: "Ice filter coffee with milk",
+        price: "7.50",
+        image: require("../assets/image/Food/ice_coffee.jpg"),
+        foodCategoryId: "10"
+    },
+    {
+        id: "23",
+        name: "Limonlu yaşıl çay",
+        description: "Green tea with lemon",
+        price: "9.00",
+        image: require("../assets/image/Food/lemon_green_tea.webp"),
+        foodCategoryId: "11"
+    },
+    {
+        id: "23",
+        name: "Ada çayı",
+        description: "Sage",
+        price: "9.00",
+        image: require("../assets/image/Food/ada_tea.jpg"),
+        foodCategoryId: "11"
     },
 ]

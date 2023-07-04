@@ -85,7 +85,7 @@ const HomeComp = ({ navigation }: any) => {
         <View>
           <TouchableOpacity onPress={() => navigation.navigate("DetailScr", item)}>
             <View style={{ marginTop: 10 }}>
-              <Image style={styles.restoranImage} source={{ uri: item.image }} />
+              <Image style={styles.restoranImage} source={item.image} />
             </View>
             <View style={styles.cardTitle}>
               <View style={{ marginHorizontal: 4, flexDirection: "row", justifyContent: "space-between" }}>
