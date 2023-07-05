@@ -176,11 +176,123 @@ export const foods = [
         foodCategoryId: "11"
     },
     {
-        id: "23",
+        id: "24",
         name: "Ada çayı",
         description: "Sage",
         price: "9.00",
         image: require("../assets/image/Food/ada_tea.jpg"),
         foodCategoryId: "11"
+    },
+    {
+        id: "25",
+        name: "Ət salatı",
+        description: "",
+        price: "6.70",
+        image: require("../assets/image/Food/etsalati.jpg"),
+        foodCategoryId: "12"
+    },
+    {
+        id: "26",
+        name: "Mimoza",
+        description: "",
+        price: "3.20",
+        image: require("../assets/image/Food/mimoza.jpg"),
+        foodCategoryId: "12"
+    },
+    {
+        id: "27",
+        name: "Paytaxt",
+        description: "",
+        price: "3.40",
+        image: require("../assets/image/Food/paytaxt.jpg"),
+        foodCategoryId: "12"
+    },
+    {
+        id: "28",
+        name: "Marakuya",
+        description: "S",
+        price: "4.00",
+        image: require("../assets/image/Food/marakuya.jpg"),
+        foodCategoryId: "13"
+    },
+    {
+        id: "29",
+        name: "Mango",
+        description: "S",
+        price: "4.00",
+        image: require("../assets/image/Food/mongo.jpg"),
+        foodCategoryId: "13"
+    },
+    {
+        id: "30",
+        name: "Toyuqlu pizza",
+        description: "Kiçik",
+        price: "6",
+        image: require("../assets/image/Food/pizzaToyuq.jpg"),
+        foodCategoryId: "14"
+    },
+    {
+        id: "31",
+        name: "Margarita pizza",
+        description: "Orta",
+        price: "8.50",
+        image: require("../assets/image/Food/margarita.webp"),
+        foodCategoryId: "14"
+    },
+    {
+        id: "32",
+        name: "Qiymalı pide",
+        description: "",
+        price: "7",
+        image: require("../assets/image/Food/qiymalipide.jpg"),
+        foodCategoryId: "15"
+    },
+    {
+        id: "33",
+        name: "Pendirli pide",
+        description: "",
+        price: "6.50",
+        image: require("../assets/image/Food/pendirlipide.jpg"),
+        foodCategoryId: "15"
+    },
+    {
+        id: "34",
+        name: "Toyuq ızqara",
+        description: "",
+        price: "15",
+        image: require("../assets/image/Food/toyuqizqara.jpg"),
+        foodCategoryId: "16"
+    },
+    {
+        id: "35",
+        name: "Kefli beçə",
+        description: "",
+        price: "19",
+        image: require("../assets/image/Food/keflibece.jpg"),
+        foodCategoryId: "16"
+    },
+    {
+        id: "35",
+        name: "Can əti",
+        description: "",
+        price: "24",
+        image: require("../assets/image/Food/caneti.jpg"),
+        foodCategoryId: "16"
+    },
+    {
+        id: "36",
+        name: "Cola",
+        description: "",
+        price: "4",
+        image: require("../assets/image/Food/cola.jpg"),
+        foodCategoryId: "17"
+    },
+    {
+        id: "37",
+        name: "Fanta",
+        description: "",
+        price: "4",
+        image: require("../assets/image/Food/fanta.jpg"),
+        foodCategoryId: "17"
     },
 ]

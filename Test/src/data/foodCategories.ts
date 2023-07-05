@@ -55,4 +55,35 @@ export const foodCategory = [
         name:"Teamania",
         restaurantId:"12",
     },
+    {
+        id:"12",
+        name:"Salad",
+        restaurantId:"5",
+    },
+    {
+        id:"13",
+        name:"Homemade lemonade",
+        restaurantId:"5",
+    },
+    {
+        id:"14",
+        name:"Pizza",
+        restaurantId:"5",
+    },
+    {
+        id:"15",
+        name:"Pide",
+        restaurantId:"5",
+    },
+    {
+        id:"16",
+        name:"Kabablar",
+        restaurantId:"6",
+    },
+    {
+        id:"17",
+        name:"Sərin içkilər",
+        restaurantId:"6",
+    },
+    
 ]
