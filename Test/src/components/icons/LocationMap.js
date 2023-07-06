@@ -4,8 +4,8 @@ const SvgLocationMap = props => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="14"
-    height="14"
+    width="24"
+    height="24"
     fill="none"
     viewBox="0 0 10 11"
     {...props}>

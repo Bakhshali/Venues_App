@@ -3,25 +3,23 @@ import React, { useEffect, useState } from 'react'
 import { restaurants } from '../data/restaurant';
 import SvgSearch from '../components/icons/Search';
 import SvgStarReview from '../components/icons/StarReview';
+import SvgHeart from './icons/Heart';
 
-const NearbyScreen = ({ route, navigation }: any) => {
-  const item = route.params;
-  
-  const palaces = restaurants.filter(c => c.categoryId == item.id)
+const FavoriteCamp = ({ navigation }: any) => {
+
 
   const [restaurant, setRestaurant] = useState<any>([])
-  
+
   const [searchData, setsearch] = useState<any>([])
 
   useEffect(() => {
-    setRestaurant(palaces)
-    setsearch(palaces)
+    setRestaurant(restaurants)
   }, [])
 
   const search = (value: string) => {
     let searchSys = searchData.filter((q: { name: string; }) => q.name.toLowerCase().includes(value.toLowerCase()));
     setRestaurant([...searchSys])
-    
+
   }
 
   const keyExtractor = (item: any) => item.id.toString();
@@ -33,35 +31,41 @@ const NearbyScreen = ({ route, navigation }: any) => {
           <View style={{ marginTop: 10 }}>
             <Image style={styles.imageSty} source={item.image} />
           </View>
-          <View style={{ borderBottomEndRadius:10,borderBottomLeftRadius:10, borderWidth:1,borderColor:"#D2D2D2" }}>
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between",marginHorizontal:10 }}>
+          <View style={{ borderBottomEndRadius: 10, borderBottomLeftRadius: 10, borderWidth: 1, borderColor: "#D2D2D2" }}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
               <Text style={{ fontFamily: "Poppins-Medium", marginTop: 3, fontSize: 22, color: "black" }}>{item.name}</Text>
               <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
                 <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
                 <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
               </View>
             </View>
-            <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between",marginHorizontal:10}}>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
               <View>
                 <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>{item.address}</Text>
               </View>
-              <View style={{flexDirection:"row",gap:5,alignItems:"center"}}>
-                <SvgStarReview/>
+              <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
+                <SvgStarReview />
                 <Text>{item.star}</Text>
               </View>
             </View>
           </View>
         </TouchableOpacity>
+        <View style={{
+          position: "absolute",
+          top: 15,
+          right: 5,
+          backgroundColor:"#E8E8E8",
+          padding:7,
+          borderRadius:20,
+        }}>
+          <SvgHeart style={styles.favoriteSty} />
+        </View>
       </View>
     )
   }
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ marginTop: 15, paddingBottom: 10,marginHorizontal:10 }}>
-        <TextInput onChangeText={search} style={styles.inputSty} placeholder={"Məkanlar"} />
-        <SvgSearch style={styles.iconSearch} />
-      </View>
       <FlatList
         data={restaurant}
         keyExtractor={keyExtractor}
@@ -73,9 +77,16 @@ const NearbyScreen = ({ route, navigation }: any) => {
   )
 }
 
-export default NearbyScreen
+export default FavoriteCamp
 
 const styles = StyleSheet.create({
+  favoriteSty: {
+
+    width: 25,
+    height: 25,
+    fill: "red",
+    stroke: "red",
+  },
   contentContainer: {
     paddingHorizontal: 10,
   },

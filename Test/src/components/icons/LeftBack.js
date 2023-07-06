@@ -5,11 +5,11 @@ const SvgLeftBack = props => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
-    // width="30"
-    // height="30"
+    width="24"
+    height="24"
     {...props}>
     <Path
-      stroke="#353535"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}

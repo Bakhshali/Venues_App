@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import SvgSearchLocationIcon1 from '../icons/SearchLocationIcon (1)'
-import SvgLocation from '../icons/Location'
-import SvgDotHorizontal from '../icons/DotHorizontal'
+import SvgSearchLocationIcon1 from './icons/SearchLocationIcon (1)'
+import SvgLocation from './icons/Location'
+import SvgDotHorizontal from './icons/DotHorizontal'
 import { categories } from '../data/category'
 import { sliders } from '../data/slider'
 import { restaurants } from '../data/restaurant'
-import SvgStarReview from '../icons/StarReview'
-import SvgLocationMap from '../icons/LocationMap'
-import SvgWatch from '../icons/Watch'
+import SvgStarReview from './icons/StarReview'
+import SvgLocationMap from './icons/LocationMap'
+import SvgWatch from './icons/Watch'
 
 const HomeComp = ({ navigation }: any) => {
   const [categoriesData, setcategories] = useState<any>([])

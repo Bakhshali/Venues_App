@@ -4,16 +4,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeComp from '../../components/HomeComp';
 import LocationComp from '../../components/LocationComp';
-import ProfileComp from '../../components/ProfileComp';
+import ProfileComp from '../../components/FavoriteComp';
 import DetailScreen from '../../screen/DetailScreen';
-import MenuScreen from '../../screen/MenuScreen';
 import NearbyScreen from '../../screen/NearbyScreen';
-import SvgHome from '../../icons/Home';
-import SvgProfile from '../../icons/Profile';
-import SvgSearchLocationIcon1 from '../../icons/SearchLocationIcon (1)';
-import SvgSearch from '../../icons/Search';
+import SvgHome from '../../components/icons/Home';
+import SvgSearchLocationIcon1 from '../../components/icons/SearchLocationIcon (1)';
+import SvgSearch from '../../components/icons/Search';
 import LanguageScreen from '../../screen/LanguageScreen';
 import AboutScreen from '../../screen/AboutScreen';
+import SvgHeart from '../../components/icons/Heart';
+import FavoriteComp from '../../components/FavoriteComp';
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -47,12 +47,13 @@ const MainTab = () => {
                 }} component={LocationComp} name="locationSc" />
                 <Tab.Screen options={{
                     tabBarIcon: ({ focused }) => (
-                        <SvgProfile style={{
+                        <SvgHeart style={{
                             stroke: focused ? "red" : "gray",
-                            fill: focused ? "none" : "none"
+                            fill: focused ? "none" : "none",
+                            width:24,height:24
                         }} />
                     )
-                }} component={ProfileComp} name="profileSc" />
+                }} component={FavoriteComp} name="profileSc" />
             </Tab.Navigator>
         )
     }
@@ -61,7 +62,6 @@ const MainTab = () => {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen component={BaseTab} name="MainTabsler" />
             <Stack.Screen component={DetailScreen} name="DetailScr" />
-            <Stack.Screen component={MenuScreen} name="MenuScr" />
             <Stack.Screen component={NearbyScreen} name="NearbyScr" />
             <Stack.Screen component={LanguageScreen} name="LanguageScr" />
             <Stack.Screen component={AboutScreen} name="AboutScr" />

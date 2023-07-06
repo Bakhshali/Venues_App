@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import SvgLeftBack from '../icons/LeftBack'
+import SvgLeftBack from '../components/icons/LeftBack'
 
 const LanguageScreen = ({ navigation }: any) => {
     return (

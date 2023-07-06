@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TextInput, ScrollView, FlatList, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import SvgLeftBack from '../icons/LeftBack'
-import SvgSearch from '../icons/Search'
+import SvgLeftBack from '../components/icons/LeftBack'
+import SvgSearch from '../components/icons/Search'
 import { foodCategory } from '../data/foodCategories'
 import { foods } from '../data/food'
 

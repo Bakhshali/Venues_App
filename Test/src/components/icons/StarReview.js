@@ -8,8 +8,8 @@ const SvgStarReview = props => (
       enableBackground: 'new 0 0 543 516.4',
     }}
     viewBox="0 0 543 516.4"
-    width="15"
-    height="15"
+    width="14"
+    height="14"
     {...props}>
     <Path
       d="m271.5 0 83.9 170L543 197.3 407.2 329.6l32.1 186.8-167.8-88.2-167.8 88.2 32.1-186.8L0 197.3 187.6 170z"

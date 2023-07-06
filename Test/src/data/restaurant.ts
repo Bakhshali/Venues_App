@@ -2,7 +2,7 @@ export const restaurants = [
     {
         id: "1",
         name: "Great Wall",
-        address: "203B,Nizami",
+        address: "203B, Nizami street",
         lat: 40.3765072,
         long: 49.8535954,
         status: true,
@@ -184,7 +184,7 @@ export const restaurants = [
     {
         id: "14",
         name: "HomeBridge",
-        address: "Salyan,14",
+        address: "Salyan, 14",
         lat: 40.3047758,
         long: 49.7706426,
         status: true,

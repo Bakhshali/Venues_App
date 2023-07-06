@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, Linking, Platform } from 'react-native'
 import React from 'react'
 import MapView, { Marker } from 'react-native-maps';
-import SvgStarReview from '../icons/StarReview';
+import SvgStarReview from '../components/icons/StarReview';
 
 
 const AboutScreen = ({ route }: any) => {
