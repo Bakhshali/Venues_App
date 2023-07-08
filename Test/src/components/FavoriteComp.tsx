@@ -4,23 +4,16 @@ import { restaurants } from '../data/restaurant';
 import SvgSearch from '../components/icons/Search';
 import SvgStarReview from '../components/icons/StarReview';
 import SvgHeart from './icons/Heart';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, StateType } from '../redux/store/vanueStore';
+import { addToFavorite } from '../redux/slice/vanueSlice';
 
 const FavoriteCamp = ({ navigation }: any) => {
 
 
-  const [restaurant, setRestaurant] = useState<any>([])
 
-  const [searchData, setsearch] = useState<any>([])
-
-  useEffect(() => {
-    setRestaurant(restaurants)
-  }, [])
-
-  const search = (value: string) => {
-    let searchSys = searchData.filter((q: { name: string; }) => q.name.toLowerCase().includes(value.toLowerCase()));
-    setRestaurant([...searchSys])
-
-  }
+  const dispatch = useDispatch<AppDispatch>()
+  const { favorites } = useSelector((state: StateType) => state.vanueData)
 
   const keyExtractor = (item: any) => item.id.toString();
 
@@ -54,11 +47,19 @@ const FavoriteCamp = ({ navigation }: any) => {
           position: "absolute",
           top: 15,
           right: 5,
-          backgroundColor:"#E8E8E8",
-          padding:7,
-          borderRadius:20,
+          backgroundColor: "#E8E8E8",
+          padding: 7,
+          borderRadius: 20,
         }}>
-          <SvgHeart style={styles.favoriteSty} />
+          <TouchableOpacity onPress={()=>dispatch(addToFavorite(item))}>
+            <SvgHeart style={{
+              width: 25,
+              height: 25,
+              fill: favorites.find((c:any)=>c.id==item.id)?"red":"none",
+              stroke:favorites.find((c:any)=>c.id==item.id)?"red":"black"
+              
+            }} />
+          </TouchableOpacity>
         </View>
       </View>
     )
@@ -67,7 +68,7 @@ const FavoriteCamp = ({ navigation }: any) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <FlatList
-        data={restaurant}
+        data={favorites}
         keyExtractor={keyExtractor}
         renderItem={renderItems}
         showsVerticalScrollIndicator={false}
@@ -80,13 +81,6 @@ const FavoriteCamp = ({ navigation }: any) => {
 export default FavoriteCamp
 
 const styles = StyleSheet.create({
-  favoriteSty: {
-
-    width: 25,
-    height: 25,
-    fill: "red",
-    stroke: "red",
-  },
   contentContainer: {
     paddingHorizontal: 10,
   },
