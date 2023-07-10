@@ -272,7 +272,7 @@ export const foods = [
         foodCategoryId: "16"
     },
     {
-        id: "35",
+        id: "36",
         name: "Can əti",
         description: "",
         price: "24",
@@ -280,7 +280,7 @@ export const foods = [
         foodCategoryId: "16"
     },
     {
-        id: "36",
+        id: "37",
         name: "Cola",
         description: "",
         price: "4",
@@ -288,11 +288,371 @@ export const foods = [
         foodCategoryId: "17"
     },
     {
-        id: "37",
+        id: "38",
         name: "Fanta",
         description: "",
         price: "4",
         image: require("../assets/image/Food/fanta.jpg"),
         foodCategoryId: "17"
+    },
+    {
+        id: "39",
+        name: "Farel",
+        description: "bütün",
+        price: "14",
+        image: require("../assets/image/Food/farel.jpg"),
+        foodCategoryId: "18"
+    },
+    {
+        id: "40",
+        name: "Sudak",
+        description: "bütün",
+        price: "14",
+        image: require("../assets/image/Restaurant/sudak.jpg"),
+        foodCategoryId: "18"
+    },
+    {
+        id: "41",
+        name: "Berj",
+        description: "bütün",
+        price: "20",
+        image: require("../assets/image/Food/berj.jpg"),
+        foodCategoryId: "18"
+    },
+    {
+        id: "42",
+        name: "Sac dana",
+        description: "Can əti və yağsız dana əti, bibər..",
+        price: "26",
+        image: require("../assets/image/Food/sacdana.jpg"),
+        foodCategoryId: "19"
+    },
+    {
+        id: "43",
+        name: "Sac quzu",
+        description: "Quzu əti, quyruq, bibər, kartof..",
+        price: "25",
+        image: require("../assets/image/Food/sacquzu.jpg"),
+        foodCategoryId: "19"
+    },
+    {
+        id: "44",
+        name: "Piti",
+        description: "Quzu əti, quyruq, noxud, zəfəran, su..",
+        price: "11",
+        image: require("../assets/image/Food/piti.jpg"),
+        foodCategoryId: "19"
+    },
+    {
+        id: "45",
+        name: "Xaş",
+        description: "Dana dırnağı, su və duz",
+        price: "7",
+        image: require("../assets/image/Food/xas.jpg"),
+        foodCategoryId: "19"
+    },
+    {
+        id: "46",
+        name: "Acika",
+        description: "150 gr",
+        price: "3",
+        image: require("../assets/image/Food/acika.jpeg"),
+        foodCategoryId: "20"
+    },
+    {
+        id: "47",
+        name: "Süzmə",
+        description: "150 gr",
+        price: "4",
+        image: require("../assets/image/Food/süzmə.jpg"),
+        foodCategoryId: "20"
+    },
+    {
+        id: "48",
+        name: "Turşu assorti",
+        description: "250 gr",
+        price: "7",
+        image: require("../assets/image/Food/tursu.jpg"),
+        foodCategoryId: "20"
+    },
+    {
+        id: "49",
+        name: "Qatıq küpə",
+        description: "150 gr",
+        price: "2",
+        image: require("../assets/image/Food/qatiq.jpg"),
+        foodCategoryId: "20"
+    },
+    {
+        id: "50",
+        name: "Blinçik (ət)",
+        description: "70 gr",
+        price: "1.50",
+        image: require("../assets/image/Food/bilincik.jpg"),
+        foodCategoryId: "21"
+    },
+    {
+        id: "51",
+        name: "Blinçik (kəsmik)",
+        description: "70 gr",
+        price: "1",
+        image: require("../assets/image/Food/TVR.jpg"),
+        foodCategoryId: "21"
+    },
+    {
+        id: "52",
+        name: "Qutab (ət)",
+        description: "70 gr",
+        price: "1.50",
+        image: require("../assets/image/Food/qutabet.jpg"),
+        foodCategoryId: "21"
+    },
+    {
+        id: "53",
+        name: "Qutab (göy)",
+        description: "70 gr",
+        price: "1",
+        image: require("../assets/image/Food/qutabgoy.jpg"),
+        foodCategoryId: "21"
+    },
+    {
+        id: "54",
+        name: "Tikə",
+        description: "Quzu əti",
+        price: "7",
+        image: require("../assets/image/Food/tike.jpg"),
+        foodCategoryId: "22"
+    },
+    {
+        id: "55",
+        name: "Lülə",
+        description: "Quzu əti, quyruq, soğan",
+        price: "7",
+        image: require("../assets/image/Food/lule.jpeg"),
+        foodCategoryId: "22"
+    },
+    {
+        id: "56",
+        name: "Antrikot-tikə",
+        description: "Quzu əti",
+        price: "8",
+        image: require("../assets/image/Food/ant.webp"),
+        foodCategoryId: "22"
+    },
+    {
+        id: "57",
+        name: "Mimoza",
+        description: "220 gr",
+        price: "6",
+        image: require("../assets/image/Food/mimoza.jpg"),
+        foodCategoryId: "23"
+    },
+    {
+        id: "58",
+        name: "Paytaxt",
+        description: "220 gr",
+        price: "6",
+        image: require("../assets/image/Food/paytaxt.jpg"),
+        foodCategoryId: "23"
+    },
+    {
+        id: "59",
+        name: "Sezar",
+        description: "240 gr",
+        price: "7",
+        image: require("../assets/image/Food/sezar.jpg"),
+        foodCategoryId: "23"
+    },
+    {
+        id: "60",
+        name: "Vegan set",
+        description: "24 ədəd. Vegan Roll - 8 əd..",
+        price: "15",
+        image: require("../assets/image/Food/vegan.jpg"),
+        foodCategoryId: "24"
+    },
+    {
+        id: "61",
+        name: "Mini flaqman set",
+        description: "16 ədəd. Tamaqo maki- 4 əd..",
+        price: "15",
+        image: require("../assets/image/Food/flaqman.jpg"),
+        foodCategoryId: "24"
+    },
+    {
+        id: "62",
+        name: "Lux set",
+        description: "16 ədəd. Filadelfia layt - 4 əd..",
+        price: "17",
+        image: require("../assets/image/Food/luxset.jpg"),
+        foodCategoryId: "24"
+    },
+    {
+        id: "63",
+        name: "Friends set",
+        description: "Cəmi 28 ədəd. Crispy roll - 8 əd..",
+        price: "27",
+        image: require("../assets/image/Food/friend.jpg"),
+        foodCategoryId: "24"
+    },
+    {
+        id: "64",
+        name: "Kappa maki",
+        description: "Xiyar, düyü, küncüt, nori.",
+        price: "5",
+        image: require("../assets/image/Food/kapa.jpg"),
+        foodCategoryId: "25"
+    },
+    {
+        id: "65",
+        name: "Qommen roll",
+        description: "Düyü, nori, xıyar, krem pendir..",
+        price: "7",
+        image: require("../assets/image/Food/qommen.jpg"),
+        foodCategoryId: "25"
+    },
+    {
+        id: "66",
+        name: "Sezar roll",
+        description: "Düyü, nori, kahı, toyuqlu sous, tomat.",
+        price: "8",
+        image: require("../assets/image/Food/sezarroll.jpg"),
+        foodCategoryId: "25"
+    },
+    {
+        id: "67",
+        name: "Vegan hot",
+        description: "Krem pendir, düyü, xiyar, rəngli bibər..",
+        price: "10",
+        image: require("../assets/image/Food/veganhot.jpg"),
+        foodCategoryId: "26"
+    },
+    {
+        id: "68",
+        name: "Crunch hot",
+        description: "Krem pendir, xiyar, düyü, toyuq teriyaki..",
+        price: "11",
+        image: require("../assets/image/Food/crunch.jpg"),
+        foodCategoryId: "26"
+    },
+    {
+        id: "69",
+        name: "Amerika hot",
+        description: "Düyü, hisə verilmiş hinduşka, yapon..",
+        price: "12",
+        image: require("../assets/image/Food/american.jpg"),
+        foodCategoryId: "26"
+    },
+    {
+        id: "70",
+        name: "California",
+        description: "xiyar, avocado və yengəc çubuğu ilə roll",
+        price: "15",
+        image: require("../assets/image/Food/colo.jpg"),
+        foodCategoryId: "27"
+    },
+    {
+        id: "71",
+        name: "Philadelphia",
+        description: "hisə verilmiş qızıl balıq və pendir ilə roll",
+        price: "15",
+        image: require("../assets/image/Food/phl.jpg"),
+        foodCategoryId: "27"
+    },
+    {
+        id: "72",
+        name: "Yasai",
+        description: "xirar, avokado və qizarldılmış tərəvezlə roll",
+        price: "10",
+        image: require("../assets/image/Food/yasai.jpg"),
+        foodCategoryId: "27"
+    },
+    {
+        id: "73",
+        name: "Ebi",
+        description: "bişmiş krevetlə roll",
+        price: "15.80",
+        image: require("../assets/image/Food/ebi.jpg"),
+        foodCategoryId: "27"
+    },
+    {
+        id: "74",
+        name: "İshin don",
+        description: "qızıl balığı və yengəc çubuğu ilə",
+        price: "16",
+        image: require("../assets/image/Food/ishi.jpg"),
+        foodCategoryId: "28"
+    },
+    {
+        id: "75",
+        name: "Sake don",
+        description: "Qızıl balıq",
+        price: "18",
+        image: require("../assets/image/Food/sake.jpg"),
+        foodCategoryId: "28"
+    },
+    {
+        id: "76",
+        name: "Unagi don",
+        description: "İlan balıqı",
+        price: "30",
+        image: require("../assets/image/Food/unagi.jpg"),
+        foodCategoryId: "28"
+    },
+    {
+        id: "77",
+        name: "Kappa maki",
+        description: "Xiyar",
+        price: "6",
+        image: require("../assets/image/Food/maki.jpg"),
+        foodCategoryId: "29"
+    },
+    {
+        id: "78",
+        name: "Avokado maki",
+        description: "Avokado",
+        price: "8",
+        image: require("../assets/image/Food/avo.jpg"),
+        foodCategoryId: "29"
+    },
+    {
+        id: "79",
+        name: "Little set",
+        description: "California - 8, Philadelphia - 4..",
+        price: "26",
+        image: require("../assets/image/Food/little.jpeg"),
+        foodCategoryId: "30"
+    },
+    {
+        id: "80",
+        name: "Top set",
+        description: "Ebi hot roll - 10, Smoked salmon maki - 4..",
+        price: "30",
+        image: require("../assets/image/Food/top.jpg"),
+        foodCategoryId: "30"
+    },
+    {
+        id: "81",
+        name: "Ninja set",
+        description: "Hot philadelphia - 10, Avacado maki - 8",
+        price: "33",
+        image: require("../assets/image/Food/ninja.jpg"),
+        foodCategoryId: "30"
+    },
+    {
+        id: "82",
+        name: "Dragon set",
+        description: "Red dragon-8, Green dragon-8..",
+        price: "38",
+        image: require("../assets/image/Food/dragon.jpeg"),
+        foodCategoryId: "30"
+    },
+    {
+        id: "83",
+        name: "Master set",
+        description: "Alaska-8, Rainbow-8",
+        price: "40",
+        image: require("../assets/image/Food/master.jpg"),
+        foodCategoryId: "30"
     },
 ]

@@ -9,7 +9,6 @@ export const foodCategory = [
         name:"Salatlar",
         restaurantId:"1",
     },
-    
     {
         id:"3",
         name:"Espresso Bar",
@@ -84,6 +83,71 @@ export const foodCategory = [
         id:"17",
         name:"Sərin içkilər",
         restaurantId:"6",
+    },
+    {
+        id:"18",
+        name:"Balıq",
+        restaurantId:"7",
+    },
+    {
+        id:"19",
+        name:"Milli mətbəx",
+        restaurantId:"7",
+    },
+    {
+        id:"20",
+        name:"Soyuq qəlyanaltılar",
+        restaurantId:"8",
+    },
+    {
+        id:"21",
+        name:"İsti qəlyanaltılar",
+        restaurantId:"8",
+    },
+    {
+        id:"22",
+        name:"Kabablar",
+        restaurantId:"9",
+    },
+    {
+        id:"23",
+        name:"Salatlar",
+        restaurantId:"9",
+    },
+    {
+        id:"24",
+        name:"Suşi set",
+        restaurantId:"2",
+    },
+    {
+        id:"25",
+        name:"Suşi roll",
+        restaurantId:"2",
+    },
+    {
+        id:"26",
+        name:"İsti roll",
+        restaurantId:"2",
+    },
+    {
+        id:"27",
+        name:"Ura maki",
+        restaurantId:"4",
+    },
+    {
+        id:"28",
+        name:"Don",
+        restaurantId:"4",
+    },
+    {
+        id:"29",
+        name:"Maki",
+        restaurantId:"4",
+    },
+    {
+        id:"30",
+        name:"Sushi set",
+        restaurantId:"3",
     },
     
 ]

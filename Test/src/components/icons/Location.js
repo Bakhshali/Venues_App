@@ -5,11 +5,11 @@ const SvgLocation = props => (
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
-    // fill="none"
+    fill="none"
     viewBox="0 0 18 21"
     {...props}>
     <Path
-      // stroke="#200E32"
+      stroke="#200E32"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
@@ -20,7 +20,7 @@ const SvgLocation = props => (
       cx={8.917}
       cy={9.539}
       r={2.461}
-      // stroke="#200E32"
+      stroke="#200E32"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

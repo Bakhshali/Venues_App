@@ -6,7 +6,7 @@ const SvgLocationMap = props => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width="24"
     height="24"
-    fill="none"
+    fill="white"
     viewBox="0 0 10 11"
     {...props}>
     <Path fill="url(#LocationMap_svg__a)" d="M0 10.7h10V.7H0v10Z" />
