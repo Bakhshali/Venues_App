@@ -2,10 +2,13 @@ import { StyleSheet, Text, View, TouchableOpacity, Linking, Platform } from 'rea
 import React from 'react'
 import MapView, { Marker } from 'react-native-maps';
 import SvgStarReview from '../components/icons/StarReview';
+import moment from 'moment';
 
 
 const AboutScreen = ({ route }: any) => {
     const items = route.params
+    const currentDate = moment().format('dddd');
+    
     return (
         <View style={{ flex: 1 }}>
             <View style={{ flex: 2 }}>
@@ -40,7 +43,7 @@ const AboutScreen = ({ route }: any) => {
                 </View>
                 <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
                     <View style={{ width: 10, height: 10, borderRadius: 50, backgroundColor: "green", marginBottom: 3, marginLeft: 1 }}></View>
-                    <Text style={{ color: "gray", fontSize: 14, fontFamily: "Poppins-Regular" }}>Tuesday: All day</Text>
+                    <Text style={{ color: "gray", fontSize: 14, fontFamily: "Poppins-Regular" }}>{currentDate}: All day</Text>
                 </View>
                 <View style={{ marginTop: 10, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <View>

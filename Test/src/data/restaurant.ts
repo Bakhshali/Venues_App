@@ -166,21 +166,22 @@ export const restaurants = [
         categoryId: "4",
 
     },
-
     {
         id: "13",
-        name: "Retro Hotel",
-        address: "Quba",
-        lat: 41.3500324,
-        long: 48.4599263,
+        name: "Qafqaz Riverside",
+        address: "Qebele highway",
+        lat: 41.0055438,
+        long: 47.8801812,
         status: true,
-        star: "4.7",
-        openDate: "06:00",
-        closeDate: "00:00",
-        image: require("../assets/image/Restaurant/Retro_Hotel.jpg"),
+        star: "5.0",
+        openDate: "08:00",
+        closeDate: "23:00",
+        image: require("../assets/image/Restaurant/qafqaz_riversade.jpg"),
         categoryId: "2",
 
     },
+
+
     {
         id: "14",
         name: "HomeBridge",
@@ -197,16 +198,16 @@ export const restaurants = [
     },
     {
         id: "15",
-        name: "Qafqaz Riverside",
-        address: "Qebele highway",
-        lat: 41.0055438,
-        long: 47.8801812,
+        name: "Retro Hotel",
+        address: "Quba",
+        lat: 41.3500324,
+        long: 48.4599263,
         status: true,
-        star: "5.0",
-        openDate: "08:00",
-        closeDate: "23:00",
-        image: require("../assets/image/Restaurant/qafqaz_riversade.jpg"),
+        star: "4.7",
+        openDate: "06:00",
+        closeDate: "00:00",
+        image: require("../assets/image/Restaurant/Retro_Hotel.jpg"),
         categoryId: "2",
 
-    }
+    },
 ]

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import SvgLeftBack from '../components/icons/LeftBack'
+import SvgDotHorizontal from '../components/icons/DotHorizontal'
 
 const LanguageScreen = ({ navigation }: any) => {
     return (
@@ -8,7 +9,7 @@ const LanguageScreen = ({ navigation }: any) => {
             <View style={styles.mainSty}>
                 <TouchableOpacity onPress={() => navigation.navigate("MainTabsler")}>
                     <View style={styles.iconView}>
-                        <SvgLeftBack />
+                        <SvgLeftBack/>
                     </View>
                 </TouchableOpacity>
                 <Text style={styles.titleSty}>Tətbiq dilini seçin</Text>

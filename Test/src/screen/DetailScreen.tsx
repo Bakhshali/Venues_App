@@ -69,7 +69,10 @@ const DetailScreen = ({ route, navigation }: any) => {
       <View style={styles.mainFood}>
         <View>
           <Text style={styles.foodName}>{item.name}</Text>
-          <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>{item.description}</Text>
+          {
+            item.description&&
+            <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>{item.description}</Text>
+          }
           <Text style={{ fontSize: 13, color: "red", fontFamily: "Poppins-Medium" }}>{item.price} ₼</Text>
         </View>
         <View>

@@ -32,13 +32,13 @@ const HomeComp = ({ navigation }: any) => {
       console.log(error)
     }
   };
-  
+
   const renderItems = ({ item }: any) => {
     return (
-      <TouchableOpacity onPress={()=>navigation.navigate("NearbyScr", item)}>
+      <TouchableOpacity onPress={() => navigation.navigate("NearbyScr", item)}>
         <View style={{ marginHorizontal: 10 }}>
           <Image style={{ width: 70, height: 70, borderRadius: 50 }} source={{ uri: item.icon }} />
-          <Text style={{ textAlign: "center", fontWeight: "300", color: "#262626", fontSize: 12 ,fontFamily:"Poppins-Regular"}}>{item.name}</Text>
+          <Text style={{ textAlign: "center", fontWeight: "300", color: "#262626", fontSize: 12, fontFamily: "Poppins-Regular" }}>{item.name}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -48,8 +48,8 @@ const HomeComp = ({ navigation }: any) => {
     return (
       <View style={{ marginHorizontal: 10 }}>
         <Image style={styles.sliderImage} source={{ uri: item.image }} />
-        <View style={{position:"absolute",bottom:5,left:10,backgroundColor:"green",padding:5,borderRadius:5}}>
-          <Text style={{color:"white",fontSize:13,fontFamily:"Poppins-Regular",textAlign:"center"}}>{item.name}</Text>
+        <View style={{ position: "absolute", bottom: 5, left: 10, backgroundColor: "green", padding: 5, borderRadius: 5 }}>
+          <Text style={{ color: "white", fontSize: 13, fontFamily: "Poppins-Regular", textAlign: "center" }}>{item.name}</Text>
         </View>
       </View>
     )
@@ -129,18 +129,20 @@ const HomeComp = ({ navigation }: any) => {
           </TouchableOpacity>
         </View>
         <View style={{ flexDirection: "row", gap: 12, alignItems: "center" }}>
-          <TouchableOpacity onPress={() => navigation.navigate("LanguageScr")}>
-            <View style={{flexDirection:"row",gap:10,alignItems:"center"}}>
-            <Image
-              style={styles.flagImage}
-              source={{
-                uri: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Azerbaijan_Democtratic_Republic.PNG?20101216233118',
-              }}
-            />
-            <SvgDotHorizontal/>
-            </View>
-            
-          </TouchableOpacity>
+          <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }}>
+            <TouchableOpacity onPress={() => navigation.navigate("LanguageScr")}>
+              <Image
+                style={styles.flagImage}
+                source={{
+                  uri: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Azerbaijan_Democtratic_Republic.PNG?20101216233118',
+                }}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <SvgDotHorizontal />
+            </TouchableOpacity>
+          </View>
+
         </View>
       </View>
       <View style={{ marginTop: 25 }}>

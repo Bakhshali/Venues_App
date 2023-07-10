@@ -149,5 +149,45 @@ export const foodCategory = [
         name:"Sushi set",
         restaurantId:"3",
     },
+    {
+        id:"31",
+        name:"Ana yemək",
+        restaurantId:"13",
+    },
+    {
+        id:"32",
+        name:"Qarnirlər",
+        restaurantId:"13",
+    },
+    {
+        id:"33",
+        name:"Pasta",
+        restaurantId:"13",
+    },
+    {
+        id:"34",
+        name:"Pizza",
+        restaurantId:"14",
+    },
+    {
+        id:"35",
+        name:"Şirniyyat",
+        restaurantId:"14",
+    },
+    {
+        id:"36",
+        name:"Fast Food",
+        restaurantId:"15",
+    },
+    {
+        id:"37",
+        name:"Şorbalar",
+        restaurantId:"15",
+    },
+    {
+        id:"38",
+        name:"Salatlar",
+        restaurantId:"15",
+    },
     
 ]

@@ -655,4 +655,172 @@ export const foods = [
         image: require("../assets/image/Food/master.jpg"),
         foodCategoryId: "30"
     },
+    {
+        id: "84",
+        name: "Yarpaq dolması",
+        description: "Üzüm yarpaqları, quzu əti..",
+        price: "15",
+        image: require("../assets/image/Food/yar.jpeg"),
+        foodCategoryId: "31"
+    },
+    {
+        id: "85",
+        name: "Toyuq Biryani",
+        description: "Hind sayağı düyü ilə bişirilmiş toyuq..",
+        price: "20",
+        image: require("../assets/image/Food/biryani.jpeg"),
+        foodCategoryId: "31"
+    },
+    {
+        id: "86",
+        name: "Tavada qızardılmış qızıl balıq",
+        description: "Qızıl balıq, nar sousu, soğan..",
+        price: "35",
+        image: require("../assets/image/Food/baliq.jpeg"),
+        foodCategoryId: "31"
+    },
+    {
+        id: "87",
+        name: "Kartof firi",
+        description: "",
+        price: "6",
+        image: require("../assets/image/Food/firi.jpeg"),
+        foodCategoryId: "32"
+    },
+    {
+        id: "88",
+        name: "Qovrulmuş tərəvəzlər",
+        description: "",
+        price: "6",
+        image: require("../assets/image/Food/ter.jpeg"),
+        foodCategoryId: "32"
+    },
+    {
+        id: "89",
+        name: "Qaymaqlı ispanaq",
+        description: "",
+        price: "6",
+        image: require("../assets/image/Food/qay.jpeg"),
+        foodCategoryId: "32"
+    },
+    {
+        id: "90",
+        name: "Fettuçine Bolonez",
+        description: "Bolonez sousu, fettuçine pasta..",
+        price: "19",
+        image: require("../assets/image/Food/fec.jpeg"),
+        foodCategoryId: "33"
+    },
+    {
+        id: "91",
+        name: "Penne Alfredo",
+        description: "Penne, toyuq, göbələk, soğan..",
+        price: "18",
+        image: require("../assets/image/Food/panne.jpeg"),
+        foodCategoryId: "33"
+    },
+    {
+        id: "92",
+        name: "Toyuqlu və göbələkli risotto",
+        description: "Arborio düyü, toyuq, göbələk, parmezan..",
+        price: "18",
+        image: require("../assets/image/Food/ris.jpeg"),
+        foodCategoryId: "33"
+    },
+    {
+        id: "93",
+        name: "Pizza Marqarita",
+        description: "Pomidor sousu, mozarella və reyhan",
+        price: "15",
+        image: require("../assets/image/Food/margarita.webp"),
+        foodCategoryId: "34"
+    },
+    {
+        id: "94",
+        name: "Tərəvəzli pizza",
+        description: "Badımcan, bibər, kabak, kiçik pomidorlar..",
+        price: "18",
+        image: require("../assets/image/Food/vegpizza.jpg"),
+        foodCategoryId: "34"
+    },
+    {
+        id: "95",
+        name: "Sucuklu pizza",
+        description: "Sucuq, pomidor, motal pendir..",
+        price: "19",
+        image: require("../assets/image/Food/suc.jpg"),
+        foodCategoryId: "34"
+    },
+    {
+        id: "96",
+        name: "Paris Brest",
+        description: "",
+        price: "10",
+        image: require("../assets/image/Food/paris.jpg"),
+        foodCategoryId: "35"
+    },
+    {
+        id: "97",
+        name: "Klassik tiramisu",
+        description: "",
+        price: "12",
+        image: require("../assets/image/Food/tiramisu.jpg"),
+        foodCategoryId: "35"
+    },
+    {
+        id: "98",
+        name: "Şokolad sufle",
+        description: "",
+        price: "10",
+        image: require("../assets/image/Food/sufle.jpg"),
+        foodCategoryId: "35"
+    },
+    {
+        id: "99",
+        name: "Klab sendviç",
+        description: "Toyuq əti filesi, pomidor, yumurta..",
+        price: "16",
+        image: require("../assets/image/Food/club.jpg"),
+        foodCategoryId: "36"
+    },
+    {
+        id: "100",
+        name: "Dana ətindən burqer",
+        description: "Burqer çörəyi, dana ətindən qiymə..",
+        price: "18",
+        image: require("../assets/image/Food/burger.webp"),
+        foodCategoryId: "36"
+    },
+    {
+        id: "101",
+        name: "Balqabaq şorbası",
+        description: "Balqabaq, bal, göy pendir,qaymaq",
+        price: "7",
+        image: require("../assets/image/Food/sa.jpg"),
+        foodCategoryId: "37"
+    },
+    {
+        id: "102",
+        name: "Mərci şorbası",
+        description: "Qırmızı mərci, soğan, kök..",
+        price: "7",
+        image: require("../assets/image/Food/merci.jpg"),
+        foodCategoryId: "37"
+    },
+    {
+        id: "102",
+        name: "Toyuqlu Sezar salatı",
+        description: "Kahı, toyuq filesi, Sezar sous..",
+        price: "16",
+        image: require("../assets/image/Food/sezar.jpg"),
+        foodCategoryId: "38"
+    },
+    {
+        id: "103",
+        name: "Badımcan kürüsü",
+        description: "Badımcan, pomidor, bibər, soğan..",
+        price: "12",
+        image: require("../assets/image/Food/basd.webp"),
+        foodCategoryId: "38"
+    },
 ]

@@ -7,73 +7,92 @@ import SvgHeart from './icons/Heart';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, StateType } from '../redux/store/vanueStore';
 import { addToFavorite } from '../redux/slice/vanueSlice';
+import HomeComp from './HomeComp';
 
 const FavoriteCamp = ({ navigation }: any) => {
-
-
 
   const dispatch = useDispatch<AppDispatch>()
   const { favorites } = useSelector((state: StateType) => state.vanueData)
 
   const keyExtractor = (item: any) => item.id.toString();
 
+  console.log(favorites.length);
+
   const renderItems = ({ item }: any) => {
     return (
-      <View style={{ marginTop: 3 }}>
-        <TouchableOpacity onPress={() => navigation.navigate("DetailScr", item)}>
-          <View style={{ marginTop: 10 }}>
-            <Image style={styles.imageSty} source={item.image} />
-          </View>
-          <View style={{ borderBottomEndRadius: 10, borderBottomLeftRadius: 10, borderWidth: 1, borderColor: "#D2D2D2" }}>
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
-              <Text style={{ fontFamily: "Poppins-Medium", marginTop: 3, fontSize: 22, color: "black" }}>{item.name}</Text>
-              <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
-                <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
-                <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
+      <View>
+        {favorites.length > 0 && (
+          <View style={{ marginTop: 3 }}>
+            <TouchableOpacity onPress={() => navigation.navigate("DetailScr", item)}>
+              <View style={{ marginTop: 10 }}>
+                <Image style={styles.imageSty} source={item.image} />
               </View>
+              <View style={{ borderBottomEndRadius: 10, borderBottomLeftRadius: 10, borderWidth: 1, borderColor: "#D2D2D2" }}>
+                <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
+                  <Text style={{ fontFamily: "Poppins-Medium", marginTop: 3, fontSize: 22, color: "black" }}>{item.name}</Text>
+                  <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
+                    <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
+                    <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
+                  </View>
+                </View>
+                <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
+                  <View>
+                    <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>{item.address}</Text>
+                  </View>
+                  <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
+                    <SvgStarReview />
+                    <Text>{item.star}</Text>
+                  </View>
+                </View>
+              </View>
+            </TouchableOpacity>
+            <View style={{
+              position: "absolute",
+              top: 15,
+              right: 5,
+              backgroundColor: "#E8E8E8",
+              padding: 7,
+              borderRadius: 20,
+            }}>
+              <TouchableOpacity onPress={() => dispatch(addToFavorite(item))}>
+                <SvgHeart style={{
+                  width: 25,
+                  height: 25,
+                  fill: favorites.find((c: any) => c.id == item.id) ? "red" : "none",
+                  stroke: favorites.find((c: any) => c.id == item.id) ? "red" : "black"
+                }} />
+              </TouchableOpacity>
             </View>
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
-              <View>
-                <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>{item.address}</Text>
-              </View>
-              <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
-                <SvgStarReview />
-                <Text>{item.star}</Text>
-              </View>
-            </View>
           </View>
-        </TouchableOpacity>
-        <View style={{
-          position: "absolute",
-          top: 15,
-          right: 5,
-          backgroundColor: "#E8E8E8",
-          padding: 7,
-          borderRadius: 20,
-        }}>
-          <TouchableOpacity onPress={()=>dispatch(addToFavorite(item))}>
-            <SvgHeart style={{
-              width: 25,
-              height: 25,
-              fill: favorites.find((c:any)=>c.id==item.id)?"red":"none",
-              stroke:favorites.find((c:any)=>c.id==item.id)?"red":"black"
-              
-            }} />
-          </TouchableOpacity>
-        </View>
+        )}
       </View>
     )
   }
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <FlatList
-        data={favorites}
-        keyExtractor={keyExtractor}
-        renderItem={renderItems}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.contentContainer}
-      />
+      {favorites.length > 0 ? (
+        <FlatList
+          data={favorites}
+          keyExtractor={keyExtractor}
+          renderItem={renderItems}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.contentContainer}
+        />
+      ) : (
+        <View style={styles.emptyContainer}>
+          <Image
+            style={styles.tinyLogo}
+            source={require('../assets/image/Food/wis.png')}
+          />
+          <Text style={styles.emptyText}>Heç bir məkan yoxdur</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("homeSc")}>
+            <View style={{ backgroundColor: "black", padding: 10, borderRadius: 7 }}>
+              <Text style={{ fontSize: 14, color: "white" }}>Əsas səhifə</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      )}
     </SafeAreaView>
   )
 }
@@ -81,6 +100,10 @@ const FavoriteCamp = ({ navigation }: any) => {
 export default FavoriteCamp
 
 const styles = StyleSheet.create({
+  tinyLogo: {
+    width: 250,
+    height: 250
+  },
   contentContainer: {
     paddingHorizontal: 10,
   },
@@ -102,5 +125,16 @@ const styles = StyleSheet.create({
     color: "black",
     height: 40,
     fontSize: 15,
-  }
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  emptyText: {
+    fontFamily: "Poppins-Regular",
+    fontSize: 25,
+    color: "black",
+    marginTop: 10
+  },
 })
