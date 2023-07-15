@@ -1,20 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet} from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import HomeComp from '../../components/HomeComp';
 import LocationComp from '../../components/LocationComp';
-import ProfileComp from '../../components/FavoriteComp';
 import DetailScreen from '../../screen/DetailScreen';
 import NearbyScreen from '../../screen/NearbyScreen';
 import SvgHome from '../../components/icons/Home';
 import SvgSearchLocationIcon1 from '../../components/icons/SearchLocationIcon (1)';
-import SvgSearch from '../../components/icons/Search';
 import LanguageScreen from '../../screen/LanguageScreen';
 import AboutScreen from '../../screen/AboutScreen';
 import SvgHeart from '../../components/icons/Heart';
 import FavoriteComp from '../../components/FavoriteComp';
-import OnBoarding from '../../screen/OnBoarding';
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()

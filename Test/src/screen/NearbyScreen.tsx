@@ -19,9 +19,7 @@ const NearbyScreen = ({ route, navigation }: any) => {
 
   const dispatch = useDispatch<AppDispatch>()
   const { favorites } = useSelector((state: StateType) => state.vanueData)
-
-  console.log(favorites);
-  
+  const { language } = useSelector((state: StateType) => state.languageData)
 
   useEffect(() => {
     setRestaurant(palaces)
@@ -31,7 +29,6 @@ const NearbyScreen = ({ route, navigation }: any) => {
   const search = (value: string) => {
     let searchSys = searchData.filter((q: { name: string; }) => q.name.toLowerCase().includes(value.toLowerCase()));
     setRestaurant([...searchSys])
-
   }
 
   const keyExtractor = (item: any) => item.id.toString();
@@ -48,7 +45,14 @@ const NearbyScreen = ({ route, navigation }: any) => {
               <Text style={{ fontFamily: "Poppins-Medium", marginTop: 3, fontSize: 22, color: "black" }}>{item.name}</Text>
               <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
                 <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
-                <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
+                <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>{
+                  language == "İngilis" ?
+                    <Text>Open</Text>
+                    :
+                    <Text>
+                      Açıqdır
+                    </Text>
+                }</Text>
               </View>
             </View>
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
@@ -70,13 +74,13 @@ const NearbyScreen = ({ route, navigation }: any) => {
           padding: 7,
           borderRadius: 20,
         }}>
-          <TouchableOpacity onPress={()=>dispatch(addToFavorite(item))}>
+          <TouchableOpacity onPress={() => dispatch(addToFavorite(item))}>
             <SvgHeart style={{
               width: 25,
               height: 25,
-              fill: favorites.find((c:any)=>c.id==item.id)?"red":"none",
-              stroke:favorites.find((c:any)=>c.id==item.id)?"red":"black"
-              
+              fill: favorites.find((c: any) => c.id == item.id) ? "red" : "none",
+              stroke: favorites.find((c: any) => c.id == item.id) ? "red" : "black"
+
             }} />
           </TouchableOpacity>
         </View>
@@ -87,7 +91,12 @@ const NearbyScreen = ({ route, navigation }: any) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ marginTop: 15, paddingBottom: 10, marginHorizontal: 10 }}>
-        <TextInput onChangeText={search} style={styles.inputSty} placeholder={"Məkanlar"} />
+        <TextInput onChangeText={search} style={styles.inputSty} placeholder={
+          language == "İngilis" ?
+            "Search"
+            :
+            "Axtar"
+        } />
         <SvgSearch style={styles.iconSearch} />
       </View>
       <FlatList

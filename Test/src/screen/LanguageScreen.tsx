@@ -1,36 +1,52 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList } from 'react-native'
 import React from 'react'
-import SvgLeftBack from '../components/icons/LeftBack'
-import SvgDotHorizontal from '../components/icons/DotHorizontal'
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, StateType } from '../redux/store/vanueStore'
+import { languages } from '../data/languages'
+import { changeLanguage } from '../redux/slice/languageSlice'
 
 const LanguageScreen = ({ navigation }: any) => {
+
+    const { language } = useSelector((state: StateType) => state.languageData)
+    const dispatch = useDispatch<AppDispatch>()
+
+    const renderItems = ({ item }: any) => {
+        return (
+            <TouchableOpacity onPress={() => dispatch(changeLanguage(item.default))}>
+                <View style={{ marginTop: 20, flexDirection: "row", alignItems: "center", gap: 15 }}>
+                    <Image style={styles.flagSty} source={{ uri: item.image }} />
+                    <Text style={{ fontSize: 16, fontFamily: "Poppins-Regular", color: "black" }}>
+                        {
+                            language == "İngilis" ?
+                                item.en
+                                :
+                                item.default
+                        }</Text>
+                </View>
+            </TouchableOpacity>
+        )
+    }
+
     return (
         <View style={{ marginHorizontal: 5 }}>
+            
             <View style={styles.mainSty}>
-                <TouchableOpacity onPress={() => navigation.navigate("MainTabsler")}>
-                    <View style={styles.iconView}>
-                        <SvgLeftBack/>
-                    </View>
-                </TouchableOpacity>
-                <Text style={styles.titleSty}>Tətbiq dilini seçin</Text>
+            <AntDesign onPress={()=>navigation.navigate("MainTabsler")} name='left' style={styles.backIcon} size={20} color={"black"} />
+                <Text style={styles.titleSty}>
+                    {
+                        language == "İngilis" ?
+                            <Text>Select language</Text>
+                            :
+                            <Text>Tətbiq dilini seçin</Text>
+                    }
+                </Text>
             </View>
-            <View style={{  marginHorizontal: 5}}>
-                <View style={{marginTop: 20,flexDirection:"row",alignItems:"center",gap:15}}>
-                    <Image style={styles.flagSty} source={{ uri: "https://media.istockphoto.com/id/486407806/vector/union-jack.jpg?s=612x612&w=0&k=20&c=KPRndA_Czak9T0w_Eq3GnhRaNxERiEiw2cjZe5GBY-E=" }} />
-                    <Text style={{fontSize:16,fontFamily:"Poppins-Regular",color:"black"}}>İngilis</Text>
-                </View>
-                <View style={{marginTop: 20,flexDirection:"row",alignItems:"center",gap:15}}>
-                    <Image style={styles.flagSty} source={{ uri: "https://media.istockphoto.com/id/1323578098/vector/flags-of-the-world.jpg?s=612x612&w=0&k=20&c=k6oaNtJch05UlaSNlLj0Vw2kzGOQLwXe82CEQLb0DZA=" }} />
-                    <Text style={{fontSize:16,fontFamily:"Poppins-Regular",color:"black"}}>Azərbaycan</Text>
-                </View>
-                <View style={{marginTop: 20,flexDirection:"row",alignItems:"center",gap:15}}>
-                    <Image style={styles.flagSty} source={{ uri: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png" }} />
-                    <Text style={{fontSize:16,fontFamily:"Poppins-Regular",color:"black"}}>Rus</Text>
-                </View>
-                <View style={{marginTop: 20,flexDirection:"row",alignItems:"center",gap:15}}>
-                    <Image style={styles.flagSty} source={{ uri: "https://tolerance-homes.com/storage/images/pages/qP0fv1mqZpQwoJDnLJSeaxis4WhOye64LrbNaPet.jpeg" }} />
-                    <Text style={{fontSize:16,fontFamily:"Poppins-Regular",color:"black"}}>Türk</Text>
-                </View>
+            <View style={{ marginHorizontal: 5 }}>
+                <FlatList
+                    data={languages}
+                    renderItem={renderItems}
+                />
             </View>
         </View>
     )
@@ -39,6 +55,11 @@ const LanguageScreen = ({ navigation }: any) => {
 export default LanguageScreen
 
 const styles = StyleSheet.create({
+    backIcon: {
+        borderRadius: 50,
+        backgroundColor: "#D4D4D4",
+        padding:5
+      },
     flagSty: {
         width: 55,
         height: 35,

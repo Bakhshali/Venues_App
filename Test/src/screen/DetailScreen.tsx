@@ -1,15 +1,17 @@
 import { StyleSheet, Text, View, Image, TextInput, ScrollView, FlatList, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import SvgLeftBack from '../components/icons/LeftBack'
 import SvgSearch from '../components/icons/Search'
 import { foodCategory } from '../data/foodCategories'
 import { foods } from '../data/food'
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import { useSelector } from 'react-redux'
+import { StateType } from '../redux/store/vanueStore'
 
 const DetailScreen = ({ route, navigation }: any) => {
   const [searchs, setSearch] = useState<any>({ categories: [], foods: [] });
   const item = route.params;
   const [restaurantFoods, setRestaurantFoods] = useState<any>({ categories: [], foods: [] });
-
+  const { language } = useSelector((state: StateType) => state.languageData)
   useEffect(() => {
     const { categories, foods } = getRestaurantFoods(item.id);
     setRestaurantFoods({ categories, foods });
@@ -70,7 +72,7 @@ const DetailScreen = ({ route, navigation }: any) => {
         <View>
           <Text style={styles.foodName}>{item.name}</Text>
           {
-            item.description&&
+            item.description &&
             <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>{item.description}</Text>
           }
           <Text style={{ fontSize: 13, color: "red", fontFamily: "Poppins-Medium" }}>{item.price} ₼</Text>
@@ -83,7 +85,7 @@ const DetailScreen = ({ route, navigation }: any) => {
     </View>
   );
 
-  const FoodCategoryItem = ({ item }: any) => {    
+  const FoodCategoryItem = ({ item }: any) => {
     return (
       <TouchableOpacity onPress={item.id}>
         <View style={styles.foodMain}>
@@ -98,7 +100,7 @@ const DetailScreen = ({ route, navigation }: any) => {
       <View>
         <View>
           <Image style={styles.imageView} source={item.image} />
-          <SvgLeftBack  style={styles.backIcon} />
+          <AntDesign onPress={()=>navigation.navigate("MainTabsler")} name='left' style={styles.backIcon} size={25} color={"black"} />
           <Text style={styles.dateSty}>🕒 {item.openDate} - {item.closeDate}</Text>
         </View>
         <View style={styles.container}>
@@ -106,17 +108,52 @@ const DetailScreen = ({ route, navigation }: any) => {
             <Text style={styles.textName}>{item.name}</Text>
             <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
               <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
-              <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
+              <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>
+                {
+                   language=="İngilis"?
+                   <Text>Open</Text>
+                   :
+                   <Text>
+                     Açıqdır
+                   </Text>
+                }
+              </Text>
             </View>
           </View>
           <View style={{ flexDirection: "row", gap: 15, alignItems: "center" }}>
-            <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13, color: "green", paddingLeft: 2 }}>Çatdırılma</Text>
+            <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13, color: "green", paddingLeft: 2 }}>
+              {
+                language=="İngilis"?
+                <Text>Delivery</Text>
+                :
+                <Text>
+                  Çatdırılma
+                </Text>
+              }
+            </Text>
             <TouchableOpacity onPress={() => navigation.navigate("AboutScr", item)}>
-              <Text style={{ color: "black", fontFamily: "Poppins-Bold" }}>Daha ətraflı</Text>
+              <Text style={{ color: "black", fontFamily: "Poppins-Bold" }}>
+              {
+                language=="İngilis"?
+                <Text>More details</Text>
+                :
+                <Text>
+                  Daha ətraflı
+                </Text>
+              }
+              </Text>
             </TouchableOpacity>
           </View>
           <View style={{ marginTop: 10 }}>
-            <TextInput onChangeText={search} placeholder="Axtar" style={styles.searchSty} />
+            <TextInput onChangeText={search} 
+            placeholder=
+            {
+              language=="İngilis"?
+                "Search"
+                :
+                "Axtar"
+            } 
+            style={styles.searchSty} />
             <SvgSearch style={styles.seacrhIcon} />
           </View>
           <View style={{ flexDirection: "row", marginTop: 15, gap: 10 }}>
@@ -238,7 +275,9 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     backgroundColor: "#D4D4D4",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    paddingLeft: 4,
+    paddingTop: 4
   },
   container: {
     marginHorizontal: 15

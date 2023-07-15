@@ -1,22 +1,19 @@
-import { StyleSheet, Text, View, FlatList, TextInput, TouchableOpacity, Image, SafeAreaView } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { restaurants } from '../data/restaurant';
-import SvgSearch from '../components/icons/Search';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, Image, SafeAreaView } from 'react-native'
+import React from 'react'
 import SvgStarReview from '../components/icons/StarReview';
 import SvgHeart from './icons/Heart';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, StateType } from '../redux/store/vanueStore';
 import { addToFavorite } from '../redux/slice/vanueSlice';
-import HomeComp from './HomeComp';
+
 
 const FavoriteCamp = ({ navigation }: any) => {
 
   const dispatch = useDispatch<AppDispatch>()
   const { favorites } = useSelector((state: StateType) => state.vanueData)
+  const { language } = useSelector((state: StateType) => state.languageData)
 
   const keyExtractor = (item: any) => item.id.toString();
-
-  console.log(favorites.length);
 
   const renderItems = ({ item }: any) => {
     return (
@@ -32,7 +29,16 @@ const FavoriteCamp = ({ navigation }: any) => {
                   <Text style={{ fontFamily: "Poppins-Medium", marginTop: 3, fontSize: 22, color: "black" }}>{item.name}</Text>
                   <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
                     <View style={{ backgroundColor: "green", width: 10, height: 10, borderRadius: 50 }}></View>
-                    <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>Açıqdır</Text>
+                    <Text style={{ fontFamily: "Poppins-Regular", marginTop: 3, fontSize: 14, color: "black" }}>
+                    {
+                   language=="İngilis"?
+                   <Text>Open</Text>
+                   :
+                   <Text>
+                     Açıqdır
+                   </Text>
+                }
+                    </Text>
                   </View>
                 </View>
                 <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginHorizontal: 10 }}>
@@ -85,10 +91,33 @@ const FavoriteCamp = ({ navigation }: any) => {
             style={styles.tinyLogo}
             source={require('../assets/image/Food/wis.png')}
           />
-          <Text style={styles.emptyText}>Heç bir məkan yoxdur</Text>
+          <Text style={styles.emptyText}>
+            {
+              language!="İngilis"?
+              <Text>
+                Heç bir məkan yoxdur
+              </Text>
+              :
+              <Text>
+                There are no venues
+              </Text>
+            }
+          </Text>
           <TouchableOpacity onPress={() => navigation.navigate("homeSc")}>
             <View style={{ backgroundColor: "black", padding: 10, borderRadius: 7 }}>
-              <Text style={{ fontSize: 14, color: "white" }}>Əsas səhifə</Text>
+              <Text style={{ fontSize: 14, color: "white" }}>
+                
+                {
+                   language!="İngilis"?
+                   <Text>
+                     Əsas səhifə
+                   </Text>
+                   :
+                   <Text>
+                     Home page
+                   </Text>
+                }
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -133,7 +162,7 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     fontFamily: "Poppins-Regular",
-    fontSize: 25,
+    fontSize: 22,
     color: "black",
     marginTop: 10
   },

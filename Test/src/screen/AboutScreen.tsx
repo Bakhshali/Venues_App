@@ -3,12 +3,15 @@ import React from 'react'
 import MapView, { Marker } from 'react-native-maps';
 import SvgStarReview from '../components/icons/StarReview';
 import moment from 'moment';
+import { StateType } from '../redux/store/vanueStore';
+import { useSelector } from 'react-redux';
 
 
 const AboutScreen = ({ route }: any) => {
     const items = route.params
     const currentDate = moment().format('dddd');
-    
+    const { language } = useSelector((state: StateType) => state.languageData)
+
     return (
         <View style={{ flex: 1 }}>
             <View style={{ flex: 2 }}>
@@ -77,18 +80,29 @@ const AboutScreen = ({ route }: any) => {
             </View>
             <View style={{ flex: 1 }}>
                 <TouchableOpacity onPress={() => {
-                            const scheme = Platform.OS === 'ios' ? 'maps:' : 'geo:';
-                            const latLng = `${items.lat},${items.long}`;
-                            const label = items.name;
-                            const url: any = Platform.select({
-                                ios: `${scheme}${latLng}?q=${label}`,
-                                android: `${scheme}${latLng}?q=${label}&z=16`,
-                            });
+                    const scheme = Platform.OS === 'ios' ? 'maps:' : 'geo:';
+                    const latLng = `${items.lat},${items.long}`;
+                    const label = items.name;
+                    const url: any = Platform.select({
+                        ios: `${scheme}${latLng}?q=${label}`,
+                        android: `${scheme}${latLng}?q=${label}&z=16`,
+                    });
 
-                            Linking.openURL(url);
-                        }}>
+                    Linking.openURL(url);
+                }}>
                     <View style={{ backgroundColor: "blue", marginHorizontal: 20, marginTop: 20, borderRadius: 8, padding: 17 }}>
-                        <Text style={{ textAlign: "center", color: "white", fontSize: 17,fontFamily:"Poppins-Medium" }}>Xəritəyə bax</Text>
+                        <Text style={{ textAlign: "center", color: "white", fontSize: 17, fontFamily: "Poppins-Medium" }}>
+                            {
+                                language != "İngilis" ?
+                                    <Text>
+                                        Xəritəyə bax
+                                    </Text>
+                                    :
+                                    <Text>
+                                        Show map
+                                    </Text>
+                            }
+                        </Text>
                     </View>
                 </TouchableOpacity>
             </View>
