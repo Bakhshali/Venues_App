@@ -98,7 +98,7 @@ export const restaurants = [
     {
         id: "8",
         name: "Flamingo Palazzo",
-        address: "8km,M.Əliyev 24.",
+        address: "8km, M.Əliyev 24.",
         lat: 40.4012201,
         long: 49.9327611,
         status: true,

@@ -9,6 +9,7 @@ import SvgStarReview from './icons/StarReview';
 import SvgWatch from './icons/Watch';
 import { useSelector } from 'react-redux';
 import { StateType } from '../redux/store/vanueStore';
+import SvgLocationMap from './icons/LocationMap';
 
 const HomeComp = ({ navigation }: any) => {
   const [categoriesData, setCategories] = useState<any>([]);
@@ -56,6 +57,7 @@ const HomeComp = ({ navigation }: any) => {
   };
 
   const restaurantSlider = ({ item }: any) => {
+
     return (
       <View>
         <TouchableOpacity onPress={() => navigation.navigate('DetailScr', item)}>
@@ -75,8 +77,17 @@ const HomeComp = ({ navigation }: any) => {
                 }}>{item.star}</Text>
               </View>
             </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 4 }}>
-              <View style={{ flexDirection: 'row', gap: 4 }} >
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 4, alignItems: "center" }}>
+             
+                <Text>
+                  {
+                    item.address.length >= 10 ?
+                      <Text>{item.address.substring(0, 12)} ...</Text>
+                      :
+                      <Text>{item.address}</Text>
+                  }
+                </Text>
+              <View style={{ flexDirection: 'row', gap: 4,marginTop:4 }} >
                 <SvgWatch style={{ marginTop: 2 }} />
                 <Text style={{ fontSize: 13, fontFamily: 'Poppins-Regular' }}>{item.openDate} - {item.closeDate}</Text>
               </View>
@@ -157,9 +168,9 @@ const HomeComp = ({ navigation }: any) => {
         />
       </View>
       <View style={{ marginHorizontal: 15 }}>
-        {formatData().map((item :any, index :any) => (
+        {formatData().map((item: any, index: any) => (
           <View key={index}>
-            <Text style={{ fontSize: 18, color: 'black', fontFamily: 'Poppins-Medium' ,marginTop:10}}>{item.category}</Text>
+            <Text style={{ fontSize: 18, color: 'black', fontFamily: 'Poppins-Medium', marginTop: 10 }}>{item.category}</Text>
             <FlatList
               data={item.data}
               horizontal
@@ -184,7 +195,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     width: 220,
-    height: 50,
+
   },
   restoranImage: {
     width: 220,
