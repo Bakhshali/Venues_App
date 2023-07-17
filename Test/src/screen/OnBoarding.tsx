@@ -1,43 +1,33 @@
-import React, { useRef } from 'react';
-import { View, Text, FlatList, TouchableOpacity ,Image} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import React from 'react'
 
-const MyComponent = () => {
-  const flatListRef :any = useRef(null);
-  const data = [
-    { id: 1, text: 'Veri 1',image:require("../assets/image/Food/sezar.jpg") },
-    { id: 2, text: 'Veri 2' },
-    { id: 3, text: 'Veri 3' },
-    { id: 3, text: 'Veri 3' },
-    { id: 3, text: 'Veri 3' },
-    { id: 3, text: 'Veri 3' },
-    // Diğer veriler...
-  ];
-
-  const scrollToNextItem = () => {
-    if (flatListRef.current) {
-      flatListRef.current.scrollToIndex({ animated: true, index: 1 });
-    }
-  };
-
-  const renderItem = ({ item }:any) => (
-    <View style={{ width: 200, height: 200, borderWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>{item.text}</Text>
-    </View>
-  );
-
+const OnBoarding = ({navigation}:any) => {
   return (
-    <View>
-      <TouchableOpacity onPress={scrollToNextItem}>
-        <Text>Geri Git</Text>
-      </TouchableOpacity>
-      <FlatList
-        ref={flatListRef}
-        data={data}
-        renderItem={renderItem}
-        horizontal
-      />
+    <View style={{ flex: 1, backgroundColor: "white" }}>
+   
+      <View style={{ marginTop: 100, flex: 1 }}>
+        <Text style={{ textAlign: "center", fontSize: 28, fontFamily: "Poppins-Medium", color: "red" }}>Welcome to VenueAz</Text>
+        <Text style={{ textAlign: "center", color: "black", fontFamily: "Poppins-Regular", fontSize: 16 }}>Bir birindən fərqli məkanlar</Text>
+      </View>
+      <View style={{ marginHorizontal: 5, flex: 8 }}>
+        <Image style={styles.image} source={require("../assets/image/OnboardingGif/w.gif")} />
+      </View>
+      <View style={{ flex: 1, marginHorizontal: 10 }}>
+        <TouchableOpacity onPress={()=>navigation.navigate("MainTabsler")}>
+          <View style={{ backgroundColor: "red", padding: 10, borderRadius: 10 }}>
+            <Text style={{ color: "white", textAlign: "center", fontSize: 20, fontFamily: "Poppins-Medium" }}>Kəşf et</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
-  );
-};
+  )
+}
 
-export default MyComponent;
+export default OnBoarding
+
+const styles = StyleSheet.create({
+  image: {
+    width: "100%",
+    height: 300
+  }
+})

@@ -9,7 +9,6 @@ import SvgStarReview from './icons/StarReview';
 import SvgWatch from './icons/Watch';
 import { useSelector } from 'react-redux';
 import { StateType } from '../redux/store/vanueStore';
-import SvgLocationMap from './icons/LocationMap';
 
 const HomeComp = ({ navigation }: any) => {
   const [categoriesData, setCategories] = useState<any>([]);
@@ -82,14 +81,14 @@ const HomeComp = ({ navigation }: any) => {
                 <Text>
                   {
                     item.address.length >= 10 ?
-                      <Text>{item.address.substring(0, 12)} ...</Text>
+                      <Text style={{color:"black"}}>{item.address.substring(0, 12)} ...</Text>
                       :
-                      <Text>{item.address}</Text>
+                      <Text style={{color:"black"}}>{item.address}</Text>
                   }
                 </Text>
               <View style={{ flexDirection: 'row', gap: 4,marginTop:4 }} >
                 <SvgWatch style={{ marginTop: 2 }} />
-                <Text style={{ fontSize: 13, fontFamily: 'Poppins-Regular' }}>{item.openDate} - {item.closeDate}</Text>
+                <Text style={{ fontSize: 13, fontFamily: 'Poppins-Regular',color:"black" }}>{item.openDate} - {item.closeDate}</Text>
               </View>
             </View>
           </View>
@@ -126,7 +125,7 @@ const HomeComp = ({ navigation }: any) => {
         <View style={styles.headerMain}>
           <SvgLocation />
           <TouchableOpacity>
-            <Text>Baku, Azerbaijan</Text>
+            <Text style={{color:"black"}}>Baku, Azerbaijan</Text>
           </TouchableOpacity>
         </View>
         <View style={{ flexDirection: 'row', gap: 12, alignItems: 'center' }}>
@@ -205,7 +204,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
   },
   sliderImage: {
-    width: 375,
+    width: 340,
     height: 180,
     borderRadius: 15,
     resizeMode: 'cover',

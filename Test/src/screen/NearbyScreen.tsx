@@ -61,7 +61,7 @@ const NearbyScreen = ({ route, navigation }: any) => {
               </View>
               <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
                 <SvgStarReview />
-                <Text>{item.star}</Text>
+                <Text style={{color:"black"}}>{item.star}</Text>
               </View>
             </View>
           </View>
@@ -91,7 +91,7 @@ const NearbyScreen = ({ route, navigation }: any) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ marginTop: 15, paddingBottom: 10, marginHorizontal: 10 }}>
-        <TextInput onChangeText={search} style={styles.inputSty} placeholder={
+        <TextInput placeholderTextColor={"black"} onChangeText={search} style={styles.inputSty} placeholder={
           language == "İngilis" ?
             "Search"
             :

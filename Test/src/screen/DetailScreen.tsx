@@ -73,7 +73,7 @@ const DetailScreen = ({ route, navigation }: any) => {
           <Text style={styles.foodName}>{item.name}</Text>
           {
             item.description &&
-            <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13 }}>{item.description}</Text>
+            <Text style={{ fontFamily: "Poppins-Regular", fontSize: 13,color:"#8C8C8C" }}>{item.description}</Text>
           }
           <Text style={{ fontSize: 13, color: "red", fontFamily: "Poppins-Medium" }}>{item.price} ₼</Text>
         </View>
@@ -145,7 +145,7 @@ const DetailScreen = ({ route, navigation }: any) => {
             </TouchableOpacity>
           </View>
           <View style={{ marginTop: 10 }}>
-            <TextInput onChangeText={search} 
+            <TextInput placeholderTextColor={"black"} onChangeText={search} 
             placeholder=
             {
               language=="İngilis"?

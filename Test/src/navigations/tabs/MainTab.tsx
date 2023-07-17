@@ -12,6 +12,7 @@ import LanguageScreen from '../../screen/LanguageScreen';
 import AboutScreen from '../../screen/AboutScreen';
 import SvgHeart from '../../components/icons/Heart';
 import FavoriteComp from '../../components/FavoriteComp';
+import OnBoarding from '../../screen/OnBoarding';
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -58,7 +59,7 @@ const MainTab = () => {
 
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            {/* <Stack.Screen component={OnBoarding} name="OnBoardingScr" /> */}
+            <Stack.Screen component={OnBoarding} name="OnBoardingScr" />
             <Stack.Screen component={BaseTab} name="MainTabsler" />
             <Stack.Screen component={DetailScreen} name="DetailScr" />
             <Stack.Screen component={NearbyScreen} name="NearbyScr" />

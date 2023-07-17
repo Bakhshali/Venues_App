@@ -47,7 +47,7 @@ const FavoriteCamp = ({ navigation }: any) => {
                   </View>
                   <View style={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
                     <SvgStarReview />
-                    <Text>{item.star}</Text>
+                    <Text style={{color:"black"}}>{item.star}</Text>
                   </View>
                 </View>
               </View>
